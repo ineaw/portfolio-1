@@ -1,11 +1,3 @@
-/*
-body.dark-theme {
-  margin: 0 auto;
-  padding: 0em;
-  height: 100vh;
-  background-color: #000;
-} */
-
 * {
   font-family: tenez, sans-serif;
   list-style: none;
@@ -41,14 +33,11 @@ header {
 h1 {
   font-size: 4rem;
   margin: 0;
-  /* text-transform: uppercase; */
 }
 
 h2 {
   font-size: 2.5rem;
   margin: 0.5em 0em;
-
-  /* text-transform: uppercase; */
 }
 
 h2:hover {
@@ -59,8 +48,6 @@ h2:hover {
 h3 {
   font-size: 2rem;
   text-align: center;
-
-  /* text-transform: uppercase; */
 }
 
 .text {
@@ -70,6 +57,15 @@ h3 {
   max-width: 600px;
   font-family: roboto mono, monospace;
   font-weight: 400;
+}
+
+.text::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: burlywood;
+  margin: 20px 0px;
 }
 
 a {
@@ -82,10 +78,6 @@ li a:hover {
   text-underline-position: under;
 }
 
-/* li a {
-  margin-right: 300px;
-}
- */
 button {
   font-size: 1.2rem;
   background: none;
@@ -100,20 +92,24 @@ button {
 #cross-course,
 #semester-project,
 #project-exam {
-  padding: 0.5em;
+  padding: 0.5em 4em;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-/* ======
-Header Navigation
-====== */
+.cross-course-img img,
+.semester-proj-img img,
+.project-exam-img img {
+  width: 60vw;
+  padding: 0em 6em;
+}
 
 .navigation {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
@@ -172,7 +168,15 @@ footer {
   padding: 1em;
   text-align: center;
 }
+
 @media (min-width: 768px) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   h1 {
     font-size: 6rem;
   }
