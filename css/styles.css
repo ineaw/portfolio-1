@@ -92,7 +92,7 @@ button {
 #cross-course,
 #semester-project,
 #project-exam {
-  padding: 0.5em 4em;
+  padding: 0.5em 0em;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -103,8 +103,7 @@ button {
 .cross-course-img img,
 .semester-proj-img img,
 .project-exam-img img {
-  width: 60vw;
-  padding: 0em 6em;
+  width: 100%;
 }
 
 .navigation {
@@ -175,6 +174,18 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  #cross-course,
+  #semester-project,
+  #project-exam {
+    padding: 0.5em 4em;
+  }
+  .cross-course-img img,
+  .semester-proj-img img,
+  .project-exam-img img {
+    width: 60vw;
+    padding: 0em 6em;
   }
 
   h1 {
