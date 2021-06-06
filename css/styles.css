@@ -3,6 +3,7 @@
   list-style: none;
   text-decoration: none;
   font-size: 1.2rem;
+  line-height: 1.4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10,14 +11,16 @@
     margin: 0 auto;
     padding: 0em;
     height: 100vh;
+    background: rgb(4, 10, 26);
     background-color: rgb(4, 10, 26);
-    color: rgb(223, 187, 240);
+    color: rgb(241, 236, 243);
   }
 
   body.light-theme {
     margin: 0 auto;
     padding: 0em;
     height: 100vh;
+    background: rgb(4, 10, 26);
     background-color: rgb(233, 250, 247);
     color: rgb(1, 27, 9);
   }
@@ -36,45 +39,37 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 0.5em 0em;
-}
-
-h2:hover {
-  color: burlywood;
-  cursor: pointer;
 }
 
 h3 {
   font-size: 2rem;
+}
+
+h4 {
+  font-size: 2rem;
   text-align: center;
 }
 
-.text {
+p {
   margin: 0 auto;
   font-size: 0.8rem;
   min-width: 300px;
-  max-width: 600px;
-  font-family: roboto mono, monospace;
+  max-width: 700px;
+  font-family: roboto, monospace;
   font-weight: 400;
 }
-
-.text::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: burlywood;
-  margin: 20px 0px;
+.text {
+  margin-bottom: 15px;
 }
-
 a {
   font-family: roboto mono, monospace;
-  color: burlywood;
+  color: inherit;
 }
 
-li a:hover {
-  text-decoration: 2px solid underline;
+a:hover {
+  text-decoration: 4px solid underline;
   text-underline-position: under;
 }
 
@@ -84,6 +79,7 @@ button {
   border: none;
   cursor: pointer;
 }
+
 .main-section {
   height: 80vh;
   text-align: left;
@@ -103,7 +99,7 @@ button {
 .cross-course-img img,
 .semester-proj-img img,
 .project-exam-img img {
-  width: 100%;
+  width: 100vw;
 }
 
 .navigation {
@@ -111,56 +107,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
-
-.nav-content {
-  width: 100%;
-  position: fixed;
-  z-index: 4;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 100%;
-  transform: translateX(0);
-  transition: 400ms ease-in-out;
-  background-color: rgb(233, 250, 247);
-}
-
-.nav-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin-top: 2em;
-  padding: 1em;
-  height: 50%;
-  width: 70%;
-}
-
-.nav-link {
-  position: relative;
-  font-size: 2rem;
-}
-
-.close-nav,
-.open-nav {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: burlywood;
-}
-
-.open-nav,
-.close-nav {
-  font-size: 1.2rem;
-}
-
-.navigation-open {
-  transform: translateX(-70%);
-}
-
-.close-nav {
-  position: absolute;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0em 1em;
 }
 
 footer {
@@ -170,10 +117,7 @@ footer {
 
 @media (min-width: 768px) {
   .navigation {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
   }
 
   #cross-course,
@@ -181,6 +125,7 @@ footer {
   #project-exam {
     padding: 0.5em 4em;
   }
+
   .cross-course-img img,
   .semester-proj-img img,
   .project-exam-img img {
